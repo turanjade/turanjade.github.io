@@ -166,6 +166,10 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	p1 {
+					text-indent: 30px; /* Indent the first line by 30px */
+	}
+
 	h1 {
 		font-size: 2.75em;
 		font-weight: 700;
@@ -195,14 +199,21 @@ input, select, textarea {
 
 		}
 
-	h2, h3, h4, h5, h6 {
+	h2 {
 		font-weight: 900;
 		line-height: 1.5;
 		margin: 0 0 2em 0;
 		text-transform: uppercase;
 		letter-spacing: 0.35em;
 	}
-
+	h3, h4, h5, h6 {
+		font-size: 1.3em;
+		font-weight: 800;
+		/* line-height: 1.5;
+		margin: 0 0 1.5em 0;
+		/* text-transform: uppercase; */
+		/* letter-spacing: 0.35em; */
+	}
 		h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 		}
@@ -212,7 +223,7 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1em;
+		font-size: 1.3em;
 	}
 
 	h4 {
