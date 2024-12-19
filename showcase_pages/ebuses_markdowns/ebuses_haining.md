@@ -12,7 +12,25 @@ As for this blog, I would like to summarize the current condition into two chall
     <p><em>Figure 1: The location of Haining County</em></p>
 </div>
 
-![haininglocation](haininglocation.png)
+<div align="center">
+    <img src="hainingdepot.png" alt="hainingdepot" width=300>
+    <p><em>Figure 2: The location of bus depots in the County (red: within the city center)</em></p>
+</div>
+
+
+<div align="center">
+    <img src="hainingboarding.png" alt="hainingboarding" width=300>
+    <p><em>Figure 3: The passenger boarding on a typical day in the County</em></p>
+</div>
+
+
+<div align="center">
+    <img src="hainingtransactiontype.png" alt="hainingtransactiontype" width=300>
+    <p><em>Figure 4: The type of card transactions on a typical weekday<br>
+*(as you can imagine, most of the transactions are from discount or free cards)*</em></p>
+</div>
+
+<!-- ![haininglocation](haininglocation.png)
 <p align="center">  Figure 1: The location of Haining County </p>
 
 
@@ -29,7 +47,7 @@ As for this blog, I would like to summarize the current condition into two chall
 ![hainingtransactiontype](hainingtransactiontype.png)
 <p align="center">Figure 4: The type of card transactions on a typical weekday<br>
 *(as you can imagine, most of the transactions are from discount or free cards)*
-</p>
+</p> -->
 
 
 **1. Incentives reduce the cost from agencies, leading to excessive fleet and chargers**
