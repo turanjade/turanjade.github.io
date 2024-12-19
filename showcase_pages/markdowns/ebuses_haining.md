@@ -7,9 +7,9 @@ However, as a crucial part of social welfare, the service of public transit is d
 
 As for this blog, I would like to summarize the current condition into two challenges, based on our data-mining result from Haining County, an aging suburban area with more than 13% of the population aged over 65 (well, not that much suburb if you compare with places like Maine, no offense if any). From the following figures, you can see the location, the bus depot, and the daily passenger boarding count of this county.
 
-<figure>
-  <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" width="300"/>
-</figure>
+<p align="center">
+    <img src="./20241218-ebuses/haininglocation.png" alt="Alt text" width="400">
+</p>
 Figure 1: The location of Haining County
 
 
@@ -28,6 +28,7 @@ Figure 3: The passenger boarding on a typical day in the County
   <img src="./20241218-ebuses/hainingtransactiontype.png" alt="hainingtransactiontype" width="200"/>
 </figure>
 Figure 4: The type of card transactions on a typical weekday
+<br>
 *(as you can imagine, most of the transactions are from discount or free cards)*
 
 
