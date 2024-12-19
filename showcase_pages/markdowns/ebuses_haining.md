@@ -9,56 +9,68 @@ As for this blog, I would like to summarize the current condition into two chall
 
 <p align="center">
     <img src="./20241218-ebuses/haininglocation.png" alt="Alt text" width="400">
+    Figure 1: The location of Haining County
 </p>
-Figure 1: The location of Haining County
 
 
-<figure>
-  <img src="./20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="300"/>
-</figure>
-Figure 2: The location of bus depots in the County (red: within the city center)
+<p align="center">
+    <img src="./20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="400"/>
+    Figure 2: The location of bus depots in the County (red: within the city center)
+</p>
 
 
-<figure>
-  <img src="./20241218-ebuses/hainingboarding.png" alt="hainingboarding" width="200"/>
-</figure>
-Figure 3: The passenger boarding on a typical day in the County
+<p align="center">
+    <img src="./20241218-ebuses/hainingboarding.png" alt="hainingboarding" width="400"/>
+    Figure 3: The passenger boarding on a typical day in the County
+</p>
 
-<figure>
-  <img src="./20241218-ebuses/hainingtransactiontype.png" alt="hainingtransactiontype" width="200"/>
-</figure>
-Figure 4: The type of card transactions on a typical weekday
-<br>
-*(as you can imagine, most of the transactions are from discount or free cards)*
 
+<p align="center">
+    <img src="./20241218-ebuses/hainingtransactiontype.png" alt="hainingtransactiontype" width="400"/>
+    Figure 4: The type of card transactions on a typical weekday<br>
+    *(as you can imagine, most of the transactions are from discount or free cards)*
+</p>
 
 
 1. **Incentives reduce** **the** **cost** **from** **agencies, leading to** **excessive** **fleet** **and chargers**
 
 Such a nearly “cover all expenses” incentive policy leads to an irrational investment in both bus fleets and fast chargers. First, agencies tend to select bus types without surveying — buying large buses and pair chargers for almost every bus — because they do not have to pay and they need to ensure operational stability. The outcome is vast expenses on maintenance and substantial waste of resources — low occupancy on buses and low usage efficiency of chargers.
 
-<figure>
-  <img src="./20241218-ebuses/hainingchargerusebefore.png" alt="hainingchargerusebefore" width="200"/>
-</figure>
-Figure 5: Total number of chargers and the maximum daily use at depots
+<p align="center">
+    <img src="./20241218-ebuses/hainingchargerusebefore.png" alt="hainingchargerusebefore" width="400"/>
+    Figure 5: Total number of chargers and the maximum daily use at depots
+</p>
+
 
 2. **Diesel bus experiences do not support such a drastic fleet change**
 
 Traditional bus services were running on the basis of diesel buses, while electric buses are different in terms of the charging cycle, the degradation (the cost), and hence the scheduling. The lack of e-bus operation experiences or insufficient considerations on the charging schedule results in random charging behavior: drivers charge when they finish the work of the day or when they get to rest during lunch or in the afternoon (see the picture for the daily charging profile in our sampled city).
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/36c03dd4-f3f5-49da-a5fe-192234037daa/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/hainingchargingprofile.png" alt="hainingchargingprofile" width="400"/>
+    Figure 6: The daily charging profile of all buses
+</p>
+
 
 Actually, according to our calculation, the total daily boarding on a typical weekday is 22,614 and concentrated within the center (marked in red), the total revenue is 12,716 CNY. Guess how much the cost is? 190,625 CNY, ten times of the revenue, which means the government has to cover 93.3% of the total expenses. As we said before, the ultimate goal of public transit is not profit or break-even, but if the ridership is low and a lot of bus routes cannot even collect a single passenger, so why the government wants to pay for it?
 
 Let’s first try to tackle these two questions, and formulate an EVSP (electric-vehicle-scheduling-problem) to simultaneously optimize the charging timeslot and the bus fleet assignment (i.e., choose the correct size of the bus to run a service trip). We abstracted trips (including charging trips and service trips) as nodes, and the connection between trips (i.e., whether I have to run the next trip after finishing this trip) as arcs, and the whole network looks like. For the mathematical formulation, please refer to our publication: https://doi.org/10.1016/j.trd.2023.103724
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/c08712e4-3686-4494-814a-3a7f8e3becfd/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/networkflow.png" alt="networkflow" width="400"/>
+    Figure 7: A symbolic illustration of the network flow formulation of the EVSP
+</p>
+
 
 Next, we use a heuristic algorithm, Adaptive Large Neighbor Search (ALNS) to search for the optimal solution. The convergence is pretty good, given the large network we set in the formulation (112 routes with more than 400 service buses). Here are our results.
 
 First, we optimized the fleet distribution. After optimization, the total number of required buses drops to 363 (less than the base case by > 100). We added more smaller-sized buses into the network to reduce the life-cycle facility cost (maintenance, repair, etc.): 101 buses (83 Type-A mini-buses) should be settled. Those larger-sized buses can be put into specific scenarios such as the shuttle within the industrial plants. Those additional smaller buses, can be subsidized by the newly released “old-to-new” equipment replacement policy.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/5ed31cc0-9068-4e18-8855-69dfba2c4316/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/hainingfleetcopmare.png" alt="hainingfleetcompare" width="400"/>
+    Figure 8: The compare of the bus fleet before and after the optimization
+</p>
+
 
 We can look into the bus size distribution for each station in detail. Depots with less passenger demand, regardless of their long routes (as for today, the driving range of e-buses is no longer a headache for the daily operation), smaller vehicles are still preferred, and it is easier to purchase and maintain smaller buses.
 
