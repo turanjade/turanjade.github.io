@@ -8,25 +8,25 @@ However, as a crucial part of social welfare, the service of public transit is d
 As for this blog, I would like to summarize the current condition into two challenges, based on our data-mining result from Haining County, an aging suburban area with more than 13% of the population aged over 65 (well, not that much suburb if you compare with places like Maine, no offense if any). From the following figures, you can see the location, the bus depot, and the daily passenger boarding count of this county.
 
 <p align="center">
-    <img src="./20241218-ebuses/haininglocation.png" alt="Alt text" width="400">
+    <img src="./20241218-ebuses/haininglocation.png" alt="Alt text" width="400"><br>
     Figure 1: The location of Haining County
 </p>
 
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="400"/>
+    <img src="./20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="400"/><br>
     Figure 2: The location of bus depots in the County (red: within the city center)
 </p>
 
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingboarding.png" alt="hainingboarding" width="400"/>
+    <img src="./20241218-ebuses/hainingboarding.png" alt="hainingboarding" width="400"/><br>
     Figure 3: The passenger boarding on a typical day in the County
 </p>
 
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingtransactiontype.png" alt="hainingtransactiontype" width="400"/>
+    <img src="./20241218-ebuses/hainingtransactiontype.png" alt="hainingtransactiontype" width="400"/><br>
     Figure 4: The type of card transactions on a typical weekday<br>
     *(as you can imagine, most of the transactions are from discount or free cards)*
 </p>
@@ -37,7 +37,7 @@ As for this blog, I would like to summarize the current condition into two chall
 Such a nearly “cover all expenses” incentive policy leads to an irrational investment in both bus fleets and fast chargers. First, agencies tend to select bus types without surveying — buying large buses and pair chargers for almost every bus — because they do not have to pay and they need to ensure operational stability. The outcome is vast expenses on maintenance and substantial waste of resources — low occupancy on buses and low usage efficiency of chargers.
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingchargerusebefore.png" alt="hainingchargerusebefore" width="400"/>
+    <img src="./20241218-ebuses/hainingchargerusebefore.png" alt="hainingchargerusebefore" width="400"/><br>
     Figure 5: Total number of chargers and the maximum daily use at depots
 </p>
 
@@ -47,7 +47,7 @@ Such a nearly “cover all expenses” incentive policy leads to an irrational i
 Traditional bus services were running on the basis of diesel buses, while electric buses are different in terms of the charging cycle, the degradation (the cost), and hence the scheduling. The lack of e-bus operation experiences or insufficient considerations on the charging schedule results in random charging behavior: drivers charge when they finish the work of the day or when they get to rest during lunch or in the afternoon (see the picture for the daily charging profile in our sampled city).
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingchargingprofile.png" alt="hainingchargingprofile" width="400"/>
+    <img src="./20241218-ebuses/hainingchargingprofile.png" alt="hainingchargingprofile" width="400"/><br>
     Figure 6: The daily charging profile of all buses
 </p>
 
@@ -57,7 +57,7 @@ Actually, according to our calculation, the total daily boarding on a typical we
 Let’s first try to tackle these two questions, and formulate an EVSP (electric-vehicle-scheduling-problem) to simultaneously optimize the charging timeslot and the bus fleet assignment (i.e., choose the correct size of the bus to run a service trip). We abstracted trips (including charging trips and service trips) as nodes, and the connection between trips (i.e., whether I have to run the next trip after finishing this trip) as arcs, and the whole network looks like. For the mathematical formulation, please refer to our publication: https://doi.org/10.1016/j.trd.2023.103724
 
 <p align="center">
-    <img src="./20241218-ebuses/networkflow.png" alt="networkflow" width="400"/>
+    <img src="./20241218-ebuses/networkflow.png" alt="networkflow" width="400"/><br>
     Figure 7: A symbolic illustration of the network flow formulation of the EVSP
 </p>
 
@@ -67,27 +67,42 @@ Next, we use a heuristic algorithm, Adaptive Large Neighbor Search (ALNS) to sea
 First, we optimized the fleet distribution. After optimization, the total number of required buses drops to 363 (less than the base case by > 100). We added more smaller-sized buses into the network to reduce the life-cycle facility cost (maintenance, repair, etc.): 101 buses (83 Type-A mini-buses) should be settled. Those larger-sized buses can be put into specific scenarios such as the shuttle within the industrial plants. Those additional smaller buses, can be subsidized by the newly released “old-to-new” equipment replacement policy.
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingfleetcopmare.png" alt="hainingfleetcompare" width="400"/>
+    <img src="./20241218-ebuses/hainingfleetcompare.png" alt="hainingfleetcompare" width="400"/><br>
     Figure 8: The compare of the bus fleet before and after the optimization
 </p>
 
 
 We can look into the bus size distribution for each station in detail. Depots with less passenger demand, regardless of their long routes (as for today, the driving range of e-buses is no longer a headache for the daily operation), smaller vehicles are still preferred, and it is easier to purchase and maintain smaller buses.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/5c4090bd-6d7f-4f7d-87da-337ce69aa9a1/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/hainingfleetsharecompare.png" alt="hainingfleetsharecompare" width="400"/><br>
+    Figure 9: The bus fleet distribution before and after the optimization
+</p>
+
 
 Then, let’s compare the maxium chargers used at one timeslot before and after the optimization. It is clear that less charging plugs are used after optimization, obviously lower than the existing total plugs. That again reinforces our previous statement that the chargers are over-installed, and the efficiency can be even improved with the optimization. To make full use of the current facilities, we can open the remaining to the public for additional profits (as has been piloted in many cities like [Shanghai](https://www.pudong.gov.cn/019001001/20240827/785638.html), [Beijing](https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202410/t20241013_3918227.html), and [Qingdao](https://finance.sina.com.cn/roll/2024-08-18/doc-inckaqma2066918.shtml)) — For sure there are a lot of safety and standard issues of this practice, but we are working towards that!
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/96f692d0-e443-48d8-ae47-572399d34849/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/hainingchargingusecompare.png" alt="hainingchargingusecompare" width="400"/><br>
+    Figure 10: The comparison of the maximum chargers used daily before and after the optimization
+</p>
+
 
 One of the problems of the optimized schedule on human-driving bus routes is that, the optimized schedule should be follow strictly, while for our case, interestingly, we find the drivers only have to follow the starting time of the charging besides the scheduled trips. Here is our evidence. No matter how we changed the charging duration from 10 minutes to 60 minutes, the cost does not change much — which means the charging duration can be pretty flexible as long as the drivers follow our guidance on the trip schedule.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/b4fa5062-0b6c-4a70-b8f7-2ad151073d99/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/hainingchargingduration.png" alt="hainingchargingduration" width="400"/><br>
+    Figure 11: The sensitivity analysis of the charging duration on the total operational cost
+</p>
+
 
 Finally, the optimized cost vs. the base case (the current case) is shown in the following figure. The labor cost takes the greatest portion since it is a linear increase with the expansion of the network size, and will not be optimized because we did not include it in our decision variables.
 
-The purchasing cost and the charging cost present a significant drop thanks to our optimization. In summary, the total cost is reduced by 17.9%, and the cost per depot reduces by up to **20.6%.** Good or bad, the story is two-sided: the local government still needs to pay for **~90%** of the expenses ****to break even, while the actual money to cover the cost decreases by **19.1%** (a big shoutout 🎉).
+The purchasing cost and the charging cost present a significant drop thanks to our optimization. In summary, the total cost is reduced by 17.9%, and the cost per depot reduces by up to **20.6%.** Good or bad, the story is two-sided: the local government still needs to pay for **~90%** of the expenses to break even, while the actual money to cover the cost decreases by **19.1%** (a big shoutout 🎉).
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/13ebae0c-d2ed-4510-967a-a3d016b70909/image.png)
+<p align="center">
+    <img src="./20241218-ebuses/hainingtotalcost.png" alt="hainingtotalcost" width="400"/><br>
+    Figure 12: Total cost comparison before and after the optimization (split by bus purchasing, charging, and labor costs)
+</p>
 
 As a final remark, the optimization is one of the solutions to address the challenges of the current public transit. Instead, how to improve the service quality, plan the route to match the demand, and provide flexible on-demand services, are essential to increase (or at least maintain) the ridership — a key performance index to illustrate the service coverage and the accessibility of the public transit. Another point that is ignored by a lot of traffic engineers is the financial model. Should the government take all the burden of bus subsidies? How to stimulate the motivation of these bus agencies to provide a better and more cost-effective services? How to reshape the economic relationship among fleets, drivers, charging facilities, and bus agencies? These remain to be discussed in the future.
