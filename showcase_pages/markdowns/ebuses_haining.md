@@ -2,13 +2,15 @@
 Public transit, especially bus service, is critical to maintaining equal traveling accessibility in urban & suburban areas, and local governments usually cover the expenses of the bus operation. The logic here is, what the government pays has to see the effect, like the increasing ridership, the improved services, etc. The reality is, that the system reflects the declining ridership, the decreasing budget, and the degraded services (as you can read from a lot of social news). Imagine you are the decision maker, for sure, you do not want to continue supporting such a program.
 However, as a crucial part of social welfare, the service of public transit is definitely gonna persist. At the same time, public transit is a perfect pilot to electrify, as it is centrally controlled and can be planned & coordinated systematically to reach the optimal. Subsidies for the bus energy transformation also go beyond the private sector; on the other hand, the resource planning & the subsidy policies for the public sector can be a mirroring of what will happen in the private sector (or public for-profit sectors) given similar practices. As for today, I would like to summarize the current condition into two challenges, based on our data-mining result from Haining County, an aging suburban area with more than 13% of the population aged over 65 (well, not that much suburb if you compare with places like Maine, no offense if any). From the following figures, you can see the location, the bus depot, and the daily passenger boarding count of this county.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/e1883158-1a2b-4cda-8ded-802886a35d3b/image.png)
+<figure>
+  <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" />
+  <figcaption>Figure 1: The location of Haining County.</figcaption>
+</figure>
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/617479aa-5c58-403e-aa76-b89076958dc9/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/db1ee2d7-92df-438b-acc6-cb23910b2b5f/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dc16c-0220-4788-9210-6fba627cef57/42d14c7a-7a06-4020-9aba-db427a31d54f/image.png)
+<figure>
+  <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" />
+  <figcaption>Figure 1: The location of Haining County.</figcaption>
+</figure>
 
 (as you can imagine, most of the transactions are from discount or free cards)
 
