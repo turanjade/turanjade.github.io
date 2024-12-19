@@ -19,7 +19,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<!-- <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript> -->
-		<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -42,14 +41,40 @@
 							<h1>Electric buses, struggles, solutions, and future thinkings</h1>
 						</div>
 						<div id="markdown-content"></div>
-							<script>
+						<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+						<script>
+							const markdownContent = `
+									# Example Markdown
+
+									Public transit, especially bus service, is critical to maintaining equal traveling accessibility in urban & suburban areas, and local governments usually cover the expenses of the bus operation. The logic here is, what the government pays has to see the effect, like the increasing ridership, the improved services, etc. The reality is, that the system reflects the declining ridership, the decreasing budget, and the degraded services (as you can read from a lot of social news). Imagine you are the decision maker, for sure, you do not want to continue supporting such a program.
+									<br>
+
+									However, as a crucial part of social welfare, the service of public transit is definitely gonna persist. At the same time, public transit is a perfect pilot to electrify, as it is centrally controlled and can be planned & coordinated systematically to reach the optimal. Subsidies for the bus energy transformation also go beyond the private sector; on the other hand, the resource planning & the subsidy policies for the public sector can be a mirroring of what will happen in the private sector (or public for-profit sectors) given similar practices.
+									<br>
+
+									As for this blog, I would like to summarize the current condition into two challenges, based on our data-mining result from Haining County, an aging suburban area with more than 13% of the population aged over 65 (well, not that much suburb if you compare with places like Maine, no offense if any). From the following figures, you can see the location, the bus depot, and the daily passenger boarding count of this county.
+
+
+									![Alt text](20241218-ebuses/haininglocation.png)<br>
+									Figure 1: The location of Haining County
+									
+									        `;
+
+									// Convert Markdown to HTML using Showdown.js
+			        const converter = new showdown.Converter();
+			        const htmlContent = converter.makeHtml(markdownContent);
+
+			        // Insert the HTML content into the #markdown-content container
+			        document.getElementById('markdown-content').innerHTML = htmlContent;
+						</script>
+							<!-- <script>
 									fetch('markdowns/ebuses_haining.md')
 											.then(response => response.text())
 											.then(text => {
 													const converter = new showdown.Converter();
 													document.getElementById('markdown-content').innerHTML = converter.makeHtml(text);
 											});
-							</script>
+							</script> -->
 
 						</div>
 
