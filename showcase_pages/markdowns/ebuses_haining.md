@@ -1,31 +1,35 @@
 
 Public transit, especially bus service, is critical to maintaining equal traveling accessibility in urban & suburban areas, and local governments usually cover the expenses of the bus operation. The logic here is, what the government pays has to see the effect, like the increasing ridership, the improved services, etc. The reality is, that the system reflects the declining ridership, the decreasing budget, and the degraded services (as you can read from a lot of social news). Imagine you are the decision maker, for sure, you do not want to continue supporting such a program.
 <br>
+
 However, as a crucial part of social welfare, the service of public transit is definitely gonna persist. At the same time, public transit is a perfect pilot to electrify, as it is centrally controlled and can be planned & coordinated systematically to reach the optimal. Subsidies for the bus energy transformation also go beyond the private sector; on the other hand, the resource planning & the subsidy policies for the public sector can be a mirroring of what will happen in the private sector (or public for-profit sectors) given similar practices.
 <br>
+
 As for this blog, I would like to summarize the current condition into two challenges, based on our data-mining result from Haining County, an aging suburban area with more than 13% of the population aged over 65 (well, not that much suburb if you compare with places like Maine, no offense if any). From the following figures, you can see the location, the bus depot, and the daily passenger boarding count of this county.
 
 <figure>
   <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" width="300"/>
-  <figcaption>Figure 1: The location of Haining County</figcaption>
 </figure>
-<br>
+Figure 1: The location of Haining County
+
+
 <figure>
   <img src="./20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="300"/>
-  <figcaption>Figure 2: The location of bus depots in the County (red: within the city center)</figcaption>
 </figure>
-<br>
+Figure 2: The location of bus depots in the County (red: within the city center)
+
+
 <figure>
   <img src="./20241218-ebuses/hainingboarding.png" alt="hainingboarding" width="200"/>
-  <figcaption>Figure 3: The passenger boarding on a typical day in the County</figcaption>
 </figure>
-<br>
+Figure 3: The passenger boarding on a typical day in the County
+
 <figure>
   <img src="./20241218-ebuses/hainingtransactiontype.png" alt="hainingtransactiontype" width="200"/>
-  <figcaption>Figure 4: The type of card transactions on a typical weekday</figcaption>
 </figure>
-_(as you can imagine, most of the transactions are from discount or free cards)_
-<br>
+Figure 4: The type of card transactions on a typical weekday
+*(as you can imagine, most of the transactions are from discount or free cards)*
+
 
 
 1. **Incentives reduce** **the** **cost** **from** **agencies, leading to** **excessive** **fleet** **and chargers**
@@ -34,11 +38,10 @@ Such a nearly “cover all expenses” incentive policy leads to an irrational i
 
 <figure>
   <img src="./20241218-ebuses/hainingchargerusebefore.png" alt="hainingchargerusebefore" width="200"/>
-  <figcaption>Figure 5: Total number of chargers and the maximum daily use at depots</figcaption>
 </figure>
-<br>
+Figure 5: Total number of chargers and the maximum daily use at depots
 
-1. **Diesel bus experiences do not support such a drastic fleet change**
+2. **Diesel bus experiences do not support such a drastic fleet change**
 
 Traditional bus services were running on the basis of diesel buses, while electric buses are different in terms of the charging cycle, the degradation (the cost), and hence the scheduling. The lack of e-bus operation experiences or insufficient considerations on the charging schedule results in random charging behavior: drivers charge when they finish the work of the day or when they get to rest during lunch or in the afternoon (see the picture for the daily charging profile in our sampled city).
 
