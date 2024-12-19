@@ -30,17 +30,17 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Modeling vehicle exhaust emissions from scratch</h1>
+							<h1>Electric buses, struggles, solutions, and future thinkings</h1>
 						</div>
-						<p>measurement and modeling, to be updated</p>
-						<!-- <p>To be updated</p>
-
-						<section>
-							<h2>Users' charging behavior during highway trips</h2>
-
-						</section>
-
-						<hr> -->
+						<div id="markdown-content"></div>
+							<script>
+									fetch('markdowns/ebuses_haining.md')
+											.then(response => response.text())
+											.then(text => {
+													const converter = new showdown.Converter();
+													document.getElementById('markdown-content').innerHTML = converter.makeHtml(text);
+											});
+							</script>
 
 			</div>
 
