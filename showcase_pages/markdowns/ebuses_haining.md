@@ -28,7 +28,7 @@ As for this blog, I would like to summarize the current condition into two chall
 </p>
 
 
-1. **Incentives reduce** **the** **cost** **from** **agencies, leading to** **excessive** **fleet** **and chargers**
+**1. Incentives reduce the cost from agencies, leading to excessive fleet and chargers**
 
 Such a nearly “cover all expenses” incentive policy leads to an irrational investment in both bus fleets and fast chargers. First, agencies tend to select bus types without surveying — buying large buses and pair chargers for almost every bus — because they do not have to pay and they need to ensure operational stability. The outcome is vast expenses on maintenance and substantial waste of resources — low occupancy on buses and low usage efficiency of chargers.
 
@@ -38,7 +38,7 @@ Such a nearly “cover all expenses” incentive policy leads to an irrational i
 
 
 
-2. **Diesel bus experiences do not support such a drastic fleet change**
+**2. Diesel bus experiences do not support such a drastic fleet change**
 
 Traditional bus services were running on the basis of diesel buses, while electric buses are different in terms of the charging cycle, the degradation (the cost), and hence the scheduling. The lack of e-bus operation experiences or insufficient considerations on the charging schedule results in random charging behavior: drivers charge when they finish the work of the day or when they get to rest during lunch or in the afternoon (see the picture for the daily charging profile in our sampled city).
 
