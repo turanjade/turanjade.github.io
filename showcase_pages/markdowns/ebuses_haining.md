@@ -3,13 +3,13 @@ Public transit, especially bus service, is critical to maintaining equal traveli
 However, as a crucial part of social welfare, the service of public transit is definitely gonna persist. At the same time, public transit is a perfect pilot to electrify, as it is centrally controlled and can be planned & coordinated systematically to reach the optimal. Subsidies for the bus energy transformation also go beyond the private sector; on the other hand, the resource planning & the subsidy policies for the public sector can be a mirroring of what will happen in the private sector (or public for-profit sectors) given similar practices. As for today, I would like to summarize the current condition into two challenges, based on our data-mining result from Haining County, an aging suburban area with more than 13% of the population aged over 65 (well, not that much suburb if you compare with places like Maine, no offense if any). From the following figures, you can see the location, the bus depot, and the daily passenger boarding count of this county.
 
 <figure>
-  <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" />
-  <figcaption>Figure 1: The location of Haining County.</figcaption>
+  <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" width="500"/>
+  <figcaption>Figure 1: The location of Haining County</figcaption>
 </figure>
 
 <figure>
-  <img src="./20241218-ebuses/haininglocation.png" alt="haininglocations" />
-  <figcaption>Figure 1: The location of Haining County.</figcaption>
+  <img src="./20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="500"/>
+  <figcaption>Figure 1: The location of bus depots in Haining County (red: within the city center)</figcaption>
 </figure>
 
 (as you can imagine, most of the transactions are from discount or free cards)
