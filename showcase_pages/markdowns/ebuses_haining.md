@@ -13,11 +13,6 @@ As for this blog, I would like to summarize the current condition into two chall
   Figure 1: The location of Haining County
 </div>
 
-<p align="center">
-    <img src="20241218-ebuses/haininglocation.png" alt="Alt text" width="400"><br>
-    Figure 1: The location of Haining County
-</p>
-
 
 <p align="center">
     <img src="20241218-ebuses/hainingdepot.png" alt="hainingdepot" width="400"/><br>
