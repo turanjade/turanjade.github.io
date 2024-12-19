@@ -11,6 +11,7 @@ As for this blog, I would like to summarize the current condition into two chall
 ![haininglocation](haininglocation.png)
 <p align="center">  Figure 1: The location of Haining County </p>
 
+
 ![hainingdepot](hainingdepot.png)
 <p align="center">Figure 2: The location of bus depots in the County (red: within the city center)
 </p>
