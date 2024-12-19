@@ -91,7 +91,7 @@ Finally, the optimized cost vs. the base case (the current case) is shown in the
 The purchasing cost and the charging cost present a significant drop thanks to our optimization. In summary, the total cost is reduced by 17.9%, and the cost per depot reduces by up to **20.6%.** Good or bad, the story is two-sided: the local government still needs to pay for **~90%** of the expenses to break even, while the actual money to cover the cost decreases by **19.1%** (a big shoutout 🎉).
 
 ![hainingtotalcost](hainingtotalcost.png)
-<p align="center">Figure 11: The sensitivity analysis of the charging duration on the total operational cost
+<p align="center">Figure 12: Total cost comparison before and after the optimization (split into purchasing, charging, and labor costs)
 </p>
 
 
