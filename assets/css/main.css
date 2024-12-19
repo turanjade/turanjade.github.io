@@ -2353,6 +2353,11 @@ input, select, textarea {
 			top: 0.25em;
 		}
 
+		.image.center {
+			display: flex;
+            justify-content: center;
+            align-items: center;
+		}
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
