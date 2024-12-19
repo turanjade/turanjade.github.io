@@ -9,7 +9,7 @@ As for this blog, I would like to summarize the current condition into two chall
 
 
 <div style="text-align: center;">
-  ![haininglocation](20241218-ebuses/haininglocation.png)<br>
+  [Alt text](20241218-ebuses/haininglocation.png)<br>
   Figure 1: The location of Haining County
 </div>
 
