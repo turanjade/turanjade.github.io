@@ -83,7 +83,7 @@ We can look into the bus size distribution for each station in detail. Depots wi
 Then, let’s compare the maxium chargers used at one timeslot before and after the optimization. It is clear that less charging plugs are used after optimization, obviously lower than the existing total plugs. That again reinforces our previous statement that the chargers are over-installed, and the efficiency can be even improved with the optimization. To make full use of the current facilities, we can open the remaining to the public for additional profits (as has been piloted in many cities like [Shanghai](https://www.pudong.gov.cn/019001001/20240827/785638.html), [Beijing](https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202410/t20241013_3918227.html), and [Qingdao](https://finance.sina.com.cn/roll/2024-08-18/doc-inckaqma2066918.shtml)) — For sure there are a lot of safety and standard issues of this practice, but we are working towards that!
 
 <p align="center">
-    <img src="./20241218-ebuses/hainingchargingusecompare.png" alt="hainingchargingusecompare" width="400"/><br>
+    <img src="./20241218-ebuses/hainingchargerusecompare.png" alt="hainingchargingusecompare" width="400"/><br>
     Figure 10: The comparison of the maximum chargers used daily before and after the optimization
 </p>
 
