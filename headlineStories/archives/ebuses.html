@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Rethinking the planning and resource allocation of electric buses through optimization</title>
+		<style>
+			/* Ensure the image is treated as a block element to allow centering */
+			#markdown-content img {
+				display: block;
+				margin: 0 auto;   /* Centers the image */
+				width: 30%;       /* Adjust this value to resize the image */
+			}
+		</style>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript> 
+		<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				margin: 20px;
+			}
+			#html-output {
+				border: 1px solid #ccc;
+				padding: 20px;
+				border-radius: 5px;
+				background-color: #f9f9f9;
+				text-align: justify; /* Aligns text to justify */
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="javascript:history.back()" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span>
+									<span class="title">Back to the last page</span>
+								</a>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Electric buses, struggles, solutions, and future thinkings</h1>
+						</div>
+		
+
+						<div id="markdown-content"></div>
+						<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+							<script>
+									fetch('ebuses_markdowns/ebuses_haining.md')
+											.then(response => response.text())
+											.then(text => {
+													const converter = new showdown.Converter();
+													document.getElementById('markdown-content').innerHTML = converter.makeHtml(text);
+											});
+							</script>
+						</div> 
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
