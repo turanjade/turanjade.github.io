@@ -18,6 +18,48 @@
 			nav.topbar ul li a { color: white; text-decoration: none; padding: 10px; }
 			nav.topbar ul li a:hover { background-color: #575757; border-radius: 4px; }
 
+			/* Dark / light mode toggle switch */
+			#mode-toggle {
+				appearance: none; -webkit-appearance: none;
+				position: relative; width: 40px; height: 20px; padding: 0;
+				border: none; border-radius: 20px; background: #666;
+				cursor: pointer; vertical-align: middle;
+				transition: background 0.2s ease;
+			}
+			#mode-toggle::before {
+				content: ""; position: absolute; top: 2px; left: 2px;
+				width: 16px; height: 16px; border-radius: 50%;
+				background: #fff; transition: transform 0.2s ease;
+			}
+			body.dark-mode #mode-toggle { background: #f2849e; }
+			body.dark-mode #mode-toggle::before { transform: translateX(20px); }
+
+			/* Dark mode overrides (template ships light by default) */
+			body.dark-mode { background: #1e242b !important; }
+			body.dark-mode, body.dark-mode input, body.dark-mode select, body.dark-mode textarea { color: #c8ccd2; }
+			body.dark-mode #wrapper,
+			body.dark-mode #main,
+			body.dark-mode #header,
+			body.dark-mode #footer,
+			body.dark-mode #main > .inner { background: #1e242b; }
+			body.dark-mode h1,
+			body.dark-mode h2,
+			body.dark-mode h3,
+			body.dark-mode h4,
+			body.dark-mode h5,
+			body.dark-mode h6,
+			body.dark-mode strong,
+			body.dark-mode b,
+			body.dark-mode .logo .title { color: #f4f5f7; }
+			body.dark-mode a { color: #f2849e; border-bottom-color: rgba(242, 132, 158, 0.5); }
+			body.dark-mode #header,
+			body.dark-mode #footer { border-color: #333c46; }
+			body.dark-mode .box,
+			body.dark-mode pre,
+			body.dark-mode code,
+			body.dark-mode table tbody tr:nth-child(2n - 1) { background: rgba(255, 255, 255, 0.05); }
+			body.dark-mode .role { color: #f2849e; }
+
 			/* Bio layout */
 			.bio { display: flex; flex-wrap: wrap; gap: 3.5em; align-items: flex-start; margin-top: 1em; }
 			.bio .photo { flex: 0 0 320px; max-width: 320px; }
@@ -38,6 +80,7 @@
 				<li><a href="Projects.html"><b>Projects</b></a></li>
 				<li><a href="TreesLab.html"><b>TreesLab</b></a></li>
 				<li><a href="Showcases.html"><b>Showcases</b></a></li>
+				<li><button id="mode-toggle" type="button" onclick="toggleMode()" role="switch" aria-checked="false" aria-label="Toggle dark mode" title="Toggle dark mode"></button></li>
 			</ul>
 		</nav>
 
@@ -104,6 +147,26 @@
 			</footer>
 
 		</div>
+
+		<!-- Dark / light mode toggle -->
+		<script>
+			function applyMode(mode) {
+				var isDark = mode === 'dark';
+				document.body.classList.toggle('dark-mode', isDark);
+				var btn = document.getElementById('mode-toggle');
+				if (btn) btn.setAttribute('aria-checked', isDark ? 'true' : 'false');
+			}
+			function toggleMode() {
+				var next = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+				try { localStorage.setItem('theme', next); } catch (e) {}
+				applyMode(next);
+			}
+			(function () {
+				var saved;
+				try { saved = localStorage.getItem('theme'); } catch (e) {}
+				applyMode(saved || 'light');
+			})();
+		</script>
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
